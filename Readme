@@ -1,0 +1,32 @@
+http://xunitpatterns.com
+
+Important annotations used:
+
+@RunWith(MockitoJUnitRunner.class)
+
+@Test
+@Mock : if you are mocking something , then u can provide the default parameter and what it should return.
+@InjectMocks
+@MockBean : adds the bean to the spring application context if it is not already present.
+
+
+@RunWith(SpringRunner.class)
+@SpringBootTest(webEnvironment=WebEnvironment.RANDOM_PORT) : for integration test
+@TestPropertySource(locations= {"classpath:test-configuration.properties"})
+
+@RunWith(SpringRunner.class)
+@WebMvcTest(ItemController.class)
+
+@ContextConfiguration
+@Import
+
+@RunWith(SpringRunner.class)
+@DataJpaTest //important for testing the repository class.creates all the database related connections with this annotation.
+
+
+Libraries : 
+
+Assert
+hamcrest
+Assertion
+
